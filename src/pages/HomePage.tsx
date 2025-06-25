@@ -63,8 +63,8 @@
 
 // export default HomePage;
 // src/pages/HomePage.tsx
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+
+import { motion, type Variants } from "framer-motion";
 import profileLogo from "../../public/profile.jpg"; // Profil resminizi assets klasörüne koyun
 
 // // Yeni Bölümler İçin Bileşenler (Basit Tutuyorum, Dilerseniz Detaylandırabilirsiniz)
@@ -332,17 +332,17 @@ import profileLogo from "../../public/profile.jpg"; // Profil resminizi assets k
 
 // export default HomePage;
 // Animasyon varyantları (Genel olarak kullanılacak)
-const slideInLeft = {
+const slideInLeft: Variants = {
   hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const slideInRight = {
+const slideInRight: Variants = {
   hidden: { opacity: 0, x: 100 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
@@ -485,7 +485,7 @@ const InterestsSection: React.FC = () => {
 
 const HomePage: React.FC = () => {
   // Giriş bölümündeki yazı ve resim animasyonları (İlk yüklendiğinde çalışacak)
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
@@ -494,7 +494,7 @@ const HomePage: React.FC = () => {
     },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,
@@ -503,7 +503,7 @@ const HomePage: React.FC = () => {
     },
   };
 
-  const sentenceVariants = {
+  const sentenceVariants: Variants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
@@ -572,7 +572,7 @@ const HomePage: React.FC = () => {
       <ExperienceSection />
 
       {/* İlgi Alanlarım Bölümü */}
-      {/* <InterestsSection /> */}
+      <InterestsSection />
 
       {/* Hakkımda Bölümü (Burayı PersonalCard veya ayrı bir About bileşeni olarak düşünebilirsiniz) */}
       {/* Eğer burada PersonalCard bileşenini göstermek istiyorsanız: */}
