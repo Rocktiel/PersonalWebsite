@@ -16,32 +16,32 @@ const ContactPage: React.FC = () => {
           <p className="text-lg">
             <strong className="text-indigo-400">E-posta:</strong>{" "}
             <a
-              href="mailto:info@seymentsami.com"
+              href="mailto:seymensami81@hotmail.com"
               className="text-white hover:text-indigo-300 transition-colors duration-200"
             >
-              info@seymentsami.com
+              seymensami81@hotmail.com
             </a>
           </p>
           <p className="text-lg">
             <strong className="text-indigo-400">LinkedIn:</strong>{" "}
             <a
-              href="https://linkedin.com/in/seymentsami"
+              href="https://www.linkedin.com/in/sami-%C3%A7akalo%C4%9Flu-b7868b289/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-indigo-300 transition-colors duration-200"
             >
-              linkedin.com/in/seymentsami
+              linkedin.com/in/seymensami
             </a>
           </p>
           <p className="text-lg">
             <strong className="text-indigo-400">GitHub:</strong>{" "}
             <a
-              href="https://github.com/seymentsami"
+              href="https://github.com/Rocktiel"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-indigo-300 transition-colors duration-200"
             >
-              github.com/seymentsami
+              https://github.com/Rocktiel
             </a>
           </p>
           {/* İsteğe bağlı olarak bir iletişim formu ekleyebilirsiniz */}

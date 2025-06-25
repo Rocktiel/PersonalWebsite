@@ -55,26 +55,32 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const ProjectsPage: React.FC = () => {
   const projects: ProjectProps[] = [
     {
-      title: "E-Ticaret Platformu",
-      description:
-        "Müşterilerin ürünleri keşfedip satın alabileceği tam özellikli bir e-ticaret çözümü.",
+      title: "Proje Başlığı",
+      description: "Proje Açıklaması",
       techStack: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe"],
-      link: "https://github.com/seymentsami/ecommerce-project", // Kendi proje linkiniz
+      link: "Proje Linki", // Kendi proje linkiniz
     },
-    {
-      title: "Görev Yönetim Uygulaması",
-      description:
-        "Kullanıcıların görevlerini eklemesine, düzenlemesine ve takip etmesine olanak tanıyan bir uygulama.",
-      techStack: ["Vue.js", "TypeScript", "Firebase", "Tailwind CSS"],
-      link: "https://github.com/seymentsami/todo-app", // Kendi proje linkiniz
-    },
-    {
-      title: "Blog Uygulaması",
-      description:
-        "Yazarların makale yayınlayabileceği ve okuyucuların yorum yapabileceği dinamik bir blog platformu.",
-      techStack: ["Next.js", "GraphQL", "PostgreSQL", "Apollo Client"],
-      link: "https://github.com/seymentsami/blog-platform", // Kendi proje linkiniz
-    },
+    // {
+    //   title: "E-Ticaret Platformu",
+    //   description:
+    //     "Müşterilerin ürünleri keşfedip satın alabileceği tam özellikli bir e-ticaret çözümü.",
+    //   techStack: ["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe"],
+    //   link: "https://github.com/seymentsami/ecommerce-project", // Kendi proje linkiniz
+    // },
+    // {
+    //   title: "Görev Yönetim Uygulaması",
+    //   description:
+    //     "Kullanıcıların görevlerini eklemesine, düzenlemesine ve takip etmesine olanak tanıyan bir uygulama.",
+    //   techStack: ["Vue.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    //   link: "https://github.com/seymentsami/todo-app", // Kendi proje linkiniz
+    // },
+    // {
+    //   title: "Blog Uygulaması",
+    //   description:
+    //     "Yazarların makale yayınlayabileceği ve okuyucuların yorum yapabileceği dinamik bir blog platformu.",
+    //   techStack: ["Next.js", "GraphQL", "PostgreSQL", "Apollo Client"],
+    //   link: "https://github.com/seymentsami/blog-platform", // Kendi proje linkiniz
+    // },
     // Daha fazla proje ekleyebilirsiniz
   ];
 

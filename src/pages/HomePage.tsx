@@ -351,21 +351,20 @@ const fadeIn: Variants = {
 const BlogSection: React.FC = () => {
   const blogPosts = [
     {
-      title: "React State Yönetimi",
-      snippet:
-        "React uygulamalarında state yönetimini derinlemesine inceleyin...",
+      title: "Yazı Başlığı",
+      snippet: "İçerik.",
       link: "#",
     },
-    {
-      title: "Tailwind CSS ile Hızlı Geliştirme",
-      snippet: "Modern arayüzler tasarlarken Tailwind CSS'in gücü...",
-      link: "#",
-    },
-    {
-      title: "Node.js ile REST API Geliştirme",
-      snippet: "Backend projelerinizde Node.js ve Express kullanımı...",
-      link: "#",
-    },
+    // {
+    //   title: "Tailwind CSS ile Hızlı Geliştirme",
+    //   snippet: "Modern arayüzler tasarlarken Tailwind CSS'in gücü...",
+    //   link: "#",
+    // },
+    // {
+    //   title: "Node.js ile REST API Geliştirme",
+    //   snippet: "Backend projelerinizde Node.js ve Express kullanımı...",
+    //   link: "#",
+    // },
   ];
 
   return (
@@ -410,19 +409,25 @@ const BlogSection: React.FC = () => {
 const ExperienceSection: React.FC = () => {
   const experiences = [
     {
-      title: "Kıdemli Web Geliştirici",
-      company: "Tech Solutions A.Ş.",
-      duration: "Haziran 2022 - Devam Ediyor",
-      description:
-        "Büyük ölçekli web uygulamalarının geliştirilmesi ve bakımında lider rol üstlendim. React, Node.js ve bulut teknolojilerini kullandım.",
+      title: "Başlık",
+      company: "Şirket",
+      duration: "Süre",
+      description: "Açıklama",
     },
-    {
-      title: "Junior Yazılım Geliştirici",
-      company: "Yenilikçi Yazılım Ltd.",
-      duration: "Eylül 2020 - Mayıs 2022",
-      description:
-        "Frontend ve backend geliştirme süreçlerinde yer aldım. Ekiple birlikte yeni özellikler geliştirdim ve test süreçlerine katkıda bulundum.",
-    },
+    // {
+    //   title: "Kıdemli Web Geliştirici",
+    //   company: "Tech Solutions A.Ş.",
+    //   duration: "Haziran 2022 - Devam Ediyor",
+    //   description:
+    //     "Büyük ölçekli web uygulamalarının geliştirilmesi ve bakımında lider rol üstlendim. React, Node.js ve bulut teknolojilerini kullandım.",
+    // },
+    // {
+    //   title: "Junior Yazılım Geliştirici",
+    //   company: "Yenilikçi Yazılım Ltd.",
+    //   duration: "Eylül 2020 - Mayıs 2022",
+    //   description:
+    //     "Frontend ve backend geliştirme süreçlerinde yer aldım. Ekiple birlikte yeni özellikler geliştirdim ve test süreçlerine katkıda bulundum.",
+    // },
   ];
 
   return (
@@ -538,15 +543,7 @@ const HomePage: React.FC = () => {
             variants={sentenceVariants}
             transition={{ delay: 0.2 }}
           >
-            Web Geliştirici
-          </motion.p>
-          <motion.p
-            className="mt-4 text-lg md:text-xl text-gray-400 dark:text-gray-500 max-w-lg"
-            variants={sentenceVariants}
-            transition={{ delay: 0.4 }}
-          >
-            Kullanıcı dostu ve performanslı web uygulamaları geliştirmeye
-            odaklanmış bir web geliştiricisiyim.
+            Bilgisayar Mühendisi
           </motion.p>
         </motion.div>
 
