@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
 import React from "react";
 import { Link } from "react-router-dom"; // react-router-dom'dan Link'i içe aktarın
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const Footer: React.FC = () => {
   // Sosyal Medya İkonları için örnek SVG'ler (Gerçek ikonları kullanmak için daha gelişmiş kütüphaneler de kullanılabilir)
   const socialLinks = [
