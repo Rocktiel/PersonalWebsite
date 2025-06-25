@@ -1,0 +1,66 @@
+/* src/index.css */
+@import "tailwindcss";
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tema geçişini daha akıcı hale getirmek için */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Varsayılan (Light) Tema Değişkenleri */
+:root {
+  --color-text-primary: #213547;
+  --color-text-secondary: #4b5563;
+  --color-bg-primary: #ffffff;
+  --color-bg-card: #f9fafb;
+  --color-border-card: #e5e7eb;
+  --color-accent: #6366f1; /* Indigo-500 */
+  --color-accent-hover: #4f46e5; /* Indigo-600 */
+}
+
+/* Dark Tema Değişkenleri */
+.dark {
+  --color-text-primary: #f3f4f6;
+  --color-text-secondary: #9ca3af;
+  --color-bg-primary: #111827; /* gray-900 */
+  --color-bg-card: #1f2937; /* gray-800 */
+  --color-border-card: #374151; /* gray-700 */
+  --color-accent: #818cf8; /* Indigo-400 */
+  --color-accent-hover: #a5b4fc; /* Indigo-300 */
+}
+
+/* Tailwind'in varsayılan fontunu Inter olarak ayarla */
+body {
+  font-family: "Inter", sans-serif;
+  /* body'nin arkaplan rengini CSS değişkeninden al */
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+/* Genel link stilleri */
+a {
+  color: var(--color-accent);
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Özel bileşen stillerini doğrudan burada kullanmak yerine Tailwind sınıflarına taşıdık */
+/* Örneğin, PersonalCard bileşenindeki bg-gray-800 gibi sınıflar 'dark' sınıfı eklendiğinde otomatik olarak değişecek. */
+/* Eğer card background gibi özel bir renk istiyorsanız, Tailwind config dosyasını genişletebilir veya burada bir CSS değişkeni kullanabilirsiniz. */
+
+/* PersonalCard ve ProjectCard için kart stillerini genel değişkenlerden al */
+.personal-card-style,
+.project-card-style {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-border-card);
+  color: var(--color-text-primary);
+}
