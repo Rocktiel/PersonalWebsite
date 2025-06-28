@@ -16,12 +16,12 @@ Projeyi evimdeki eski bir bilgisayara kurduğum Ubuntu Server üzerinde çalış
 1. Eski bir bilgisayara Ubuntu Server kurulumu yaptım.
 2. React ile geliştirdiğim projeyi bu sunucuya aktardım.
 3. Cloudflare Tunnel kullanarak statik dosyaları güvenli şekilde internete açtım.
-4. Alan adımı ([www.samicakaloglu.com.tr](http://www.samicakaloglu.com.tr)) Cloudflare üzerinden yönlendirdim.
+4. Alan adımı ([www.samicakaloglu.com.tr](http://samicakaloglu.com.tr)) Cloudflare üzerinden yönlendirdim.
 5. Böylece kendi evimde barındırılan bir kişisel web sitesi oluşturmuş oldum.
 
 ## 🌐 Yayın Adresi
 
-📍 **www.samicakaloglu.com.tr**
+📍 **samicakaloglu.com.tr**
 
 ## 📁 Projeyi Çalıştırmak
 
