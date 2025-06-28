@@ -1,58 +1,37 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Kişisel Web Sitem – samicakaloglu.com.tr
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, kendi kişisel web sitemi geliştirmek ve tamamen kendi kontrolümde bir ortamda yayına almak amacıyla oluşturuldu. React ve modern frontend araçları ile geliştirilen bu site, evimde kurduğum bir sunucu aracılığıyla internette yayınlanmaktadır.
 
-Currently, two official plugins are available:
+## 🔧 Kullanılan Teknolojiler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/) – Kullanıcı arayüzünü oluşturmak için
+- [Vite](https://vitejs.dev/) – Hızlı geliştirme ve build sistemi
+- [Ubuntu Server](https://ubuntu.com/server) – Fiziksel sunucu işletim sistemi
+- [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/) – Dış dünyadan sunucuya güvenli bağlantı için
 
-## Expanding the ESLint configuration
+## 💻 Sunucu Kurulumu
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Projeyi evimdeki eski bir bilgisayara kurduğum Ubuntu Server üzerinde çalıştırdım:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Eski bir bilgisayara Ubuntu Server kurulumu yaptım.
+2. React ile geliştirdiğim projeyi bu sunucuya aktardım.
+3. Cloudflare Tunnel kullanarak statik dosyaları güvenli şekilde internete açtım.
+4. Alan adımı ([www.samicakaloglu.com.tr](http://www.samicakaloglu.com.tr)) Cloudflare üzerinden yönlendirdim.
+5. Böylece kendi evimde barındırılan bir kişisel web sitesi oluşturmuş oldum.
+
+## 🌐 Yayın Adresi
+
+📍 **www.samicakaloglu.com.tr**
+
+## 📁 Projeyi Çalıştırmak
+
+```bash
+# Bağımlılıkları kur
+npm install
+
+# Geliştirme sunucusunu başlat
+npm run dev
+
+# Build al (yayınlamak için)
+npm run build
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-=======
-# PersonalWebsite
->>>>>>> 479de4ee29e117655015447136fa5e36d595b6ad

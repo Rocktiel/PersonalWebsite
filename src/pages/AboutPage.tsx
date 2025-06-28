@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
           Hakkımda
         </h1>
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
-          Ben Seymen Sami, yazılım geliştirme dünyasına olan tutkumla bu yola
+          Ben Sami Çakaloğlu, yazılım geliştirme dünyasına olan tutkumla bu yola
           çıkmış bir profesyonelim. Özellikle web teknolojilerine odaklanmış
           olup, modern ve etkileşimli kullanıcı deneyimleri oluşturmak için
           çalışıyorum.

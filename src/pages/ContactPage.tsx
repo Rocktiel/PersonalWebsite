@@ -6,7 +6,7 @@ const ContactPage: React.FC = () => {
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-160px)] p-6 md:p-12 text-white">
       <div className="max-w-xl w-full bg-gray-800 rounded-2xl shadow-2xl p-10 md:p-12 border border-gray-700 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-indigo-500 mb-6">
-          İletişim
+          İletişim Adresleri
         </h1>
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
           Bana ulaşmak için aşağıdaki yöntemleri kullanabilirsiniz. Yeni
