@@ -5,6 +5,7 @@ Bu proje, kendi kişisel web sitemi geliştirmek ve tamamen kendi kontrolümde b
 ## 🔧 Kullanılan Teknolojiler
 
 - [React](https://reactjs.org/) – Kullanıcı arayüzünü oluşturmak için
+- [Tailwind CSS]
 - [Vite](https://vitejs.dev/) – Hızlı geliştirme ve build sistemi
 - [Ubuntu Server](https://ubuntu.com/server) – Fiziksel sunucu işletim sistemi
 - [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/) – Dış dünyadan sunucuya güvenli bağlantı için
