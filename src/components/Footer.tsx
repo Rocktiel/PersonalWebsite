@@ -1,9 +1,10 @@
 // src/components/Footer.tsx
 import React from "react";
-import { Link } from "react-router-dom"; // react-router-dom'dan Link'i içe aktarın
+import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdFileDownload } from "react-icons/md";
+import Logo from "./Logo";
 const Footer: React.FC = () => {
-  // Sosyal Medya İkonları için örnek SVG'ler (Gerçek ikonları kullanmak için daha gelişmiş kütüphaneler de kullanılabilir)
   const socialLinks = [
     {
       name: "GitHub",
@@ -15,26 +16,29 @@ const Footer: React.FC = () => {
       icon: <FaLinkedinIn className="w-6 h-6" />,
       href: "https://www.linkedin.com/in/sami-%C3%A7akalo%C4%9Flu-b7868b289/",
     },
-    // Daha fazla sosyal medya ikonları ekleyebilirsiniz
   ];
 
   return (
-    <footer className="w-full bg-gray-900 text-gray-400 py-8 md:py-12 border-t border-gray-700 mt-auto">
+    <footer className="w-full bg-[#b9c1c5] dark:bg-neutral-850 dark:text-gray-400 text-neutral-600 py-8 md:py-12 border-t border-gray-700 mt-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 text-center md:text-left">
-          {/* Sütun 1: Telif Hakkı ve Yapım Bilgisi */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-4">Seymen Sami</h3>
-            <p className="text-sm">
+            <Link
+              to="/"
+              className="flex justify-center md:justify-start items-center"
+            >
+              <Logo />
+            </Link>
+            <p className="text-sm mt-3">
               &copy; {new Date().getFullYear()} Tüm hakları saklıdır.
             </p>
-            <p className="mt-2 text-sm">
+            <p className="mt-4 text-sm">
               Bu kişisel sayfa{" "}
               <a
                 href="https://react.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-400 hover:underline transition-colors duration-200"
+                className="text-indigo-700 dark:text-indigo-400 hover:underline transition-colors duration-200"
               >
                 React
               </a>{" "}
@@ -43,7 +47,7 @@ const Footer: React.FC = () => {
                 href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-400 hover:underline transition-colors duration-200"
+                className="text-indigo-700 dark:text-indigo-400 hover:underline transition-colors duration-200"
               >
                 Tailwind CSS
               </a>{" "}
@@ -51,16 +55,15 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Sütun 2: Site İçi Navigasyon */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-4">
+            <h3 className="text-xl font-bold dark:text-white text-neutral-900 mb-4">
               Hızlı Bağlantılar
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 dark:text-gray-400 text-neutral-600">
               <li>
                 <Link
                   to="/"
-                  className="text-gray-400 hover:text-white hover:underline transition-colors duration-200"
+                  className=" hover:text-white hover:underline transition-colors duration-200"
                 >
                   Anasayfa
                 </Link>
@@ -68,7 +71,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-400 hover:text-white hover:underline transition-colors duration-200"
+                  className=" hover:text-white hover:underline transition-colors duration-200"
                 >
                   Hakkımda
                 </Link>
@@ -76,7 +79,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/projects"
-                  className="text-gray-400 hover:text-white hover:underline transition-colors duration-200"
+                  className=" hover:text-white hover:underline transition-colors duration-200"
                 >
                   Projeler
                 </Link>
@@ -84,7 +87,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-400 hover:text-white hover:underline transition-colors duration-200"
+                  className=" hover:text-white hover:underline transition-colors duration-200"
                 >
                   İletişim
                 </Link>
@@ -92,9 +95,10 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Sütun 3: Sosyal Medya */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-4">Beni Takip Et</h3>
+            <h3 className="text-xl font-bold dark:text-white text-neutral-900 mb-4">
+              Beni Takip Et
+            </h3>
             <div className="flex justify-center md:justify-start space-x-6">
               {socialLinks.map((link) => (
                 <a
@@ -103,40 +107,35 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.name}
-                  className="text-gray-400 hover:text-indigo-400 transition-colors duration-200"
+                  className="text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 hover:dark:text-white hover:scale-105 transition-colors duration-200"
                 >
                   {link.icon}
                 </a>
               ))}
             </div>
-            {/* İsteğe bağlı olarak buraya e-posta veya telefon bilgisi eklenebilir */}
+
             <p className="mt-4 text-sm">
               <a
                 href="mailto:seymensami81@hotmail.com"
-                className="text-indigo-400 hover:underline transition-colors duration-200"
+                className="text-indigo-700 dark:text-indigo-400 hover:underline transition-colors duration-200"
               >
                 seymensami81@hotmail.com
               </a>
             </p>
           </div>
 
-          {/* Sütun 4: (Opsiyonel) Ek Bilgiler / Newsletter vb. */}
-          {/* <div className="md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-4">Bülten Aboneliği</h3>
-            <form>
-              <input
-                type="email"
-                placeholder="E-posta adresiniz"
-                className="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500"
-              />
-              <button
-                type="submit"
-                className="mt-3 w-full bg-indigo-600 text-white py-2 rounded font-semibold hover:bg-indigo-700 transition-colors duration-200"
-              >
-                Abone Ol
-              </button>
-            </form>
-          </div> */}
+          <div className="md:col-span-1">
+            <h3 className="text-xl font-bold dark:text-white text-neutral-900 mb-4">
+              CV İndir
+            </h3>
+            <a
+              href="/CV.pdf"
+              download="CV.pdf"
+              className="text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 hover:dark:text-white hover:scale-105 transition-colors duration-200"
+            >
+              <MdFileDownload className="w-6 h-6" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

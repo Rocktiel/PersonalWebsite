@@ -8,10 +8,7 @@ interface SocialIconProps {
 
 const SocialIcon: React.FC<SocialIconProps> = ({ platform, link }) => {
   const getIcon = () => {
-    // SVG ikonları burada kalacak, çünkü bunlar doğrudan stil değildir.
-    // Doldurma renklerini (currentColor) ve boyutlarını ayarlamak için
-    // SVG içindeki `fill` veya Tailwind sınıflarını kullanabiliriz.
-    const iconSizeClass = "w-6 h-6"; // İkon boyutu için Tailwind sınıfı
+    const iconSizeClass = "w-6 h-6";
 
     switch (platform) {
       case "github":

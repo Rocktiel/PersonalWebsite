@@ -7,38 +7,15 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
-import "./index.css"; // Tailwind CSS'i ve tema değişkenlerini içe aktarın
+import "./index.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      return savedTheme === "dark";
-    }
-    return (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    );
-  });
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
-  const [showScrollToTop, setShowScrollToTop] = useState(false); // En üste çık butonu durumu
-
-  useEffect(() => {
-    const html = document.documentElement;
-    if (isDarkMode) {
-      html.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      html.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDarkMode]);
-
-  // Sayfa kaydırma olayını dinleyerek butonu göster/gizle
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        // 300px aşağı kaydırıldığında göster
         setShowScrollToTop(true);
       } else {
         setShowScrollToTop(false);
@@ -49,23 +26,18 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // En üste kaydırma fonksiyonu
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Yumuşak kaydırma
+      behavior: "smooth",
     });
-  };
-
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (
     <Router>
-      <div className="flex flex-col min-h-screen dark:bg-gray-900">
-        <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <ScrollToTop />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -77,7 +49,6 @@ function App() {
 
         <Footer />
 
-        {/* En Üste Çık Butonu */}
         {showScrollToTop && (
           <button
             onClick={scrollToTop}

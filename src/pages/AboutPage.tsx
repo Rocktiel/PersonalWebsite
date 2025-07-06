@@ -9,19 +9,29 @@ const AboutPage: React.FC = () => {
           Hakkımda
         </h1>
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
-          Ben Sami Çakaloğlu, yazılım geliştirme dünyasına olan tutkumla bu yola
-          çıkmış bir profesyonelim. Özellikle web teknolojilerine odaklanmış
-          olup, modern ve etkileşimli kullanıcı deneyimleri oluşturmak için
-          çalışıyorum.
+          Ben Sami Çakaloğlu, Bolu Abant İzzet Baysal Üniversitesi Bilgisayar
+          Mühendisliği bölümünden mezun oldum. Yazılım geliştirme ve problem
+          çözme tutkusu olan biriyim.
         </p>
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
           Teknolojinin sunduğu imkanları kullanarak karmaşık problemleri çözmeyi
           ve yenilikçi uygulamalar geliştirmeyi seviyorum. Sürekli öğrenmeye ve
           kendimi geliştirmeye açık bir yapıya sahibim.
         </p>
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
+          Benim için yazılım sadece bir meslek değil, sürekli gelişen bir
+          sorumluluk alanı. Yeni teknolojileri öğrenmekten çekinmem, aksine
+          onları anlamlandırmak ve projelerime entegre etmek için
+          sabırsızlanırım.
+        </p>
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
+          Çözüm odaklı yaklaşımım ve hızlı adaptasyon kabiliyetim sayesinde bir
+          projede tek başıma değer yaratabilir, bir ekip içinde uyumla
+          çalışabilirim.
+        </p>
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-          Boş zamanlarımda kitap okumak, doğa yürüyüşleri yapmak ve yeni
-          mutfakları denemek en sevdiğim aktiviteler arasında.
+          Boş zamanlarımda bilgisayar oyunları oynamak ve futbol oynamak en
+          sevdiğim aktiviteler arasında.
         </p>
       </div>
     </div>

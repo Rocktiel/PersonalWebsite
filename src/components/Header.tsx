@@ -1,61 +1,56 @@
 // src/components/Header.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDarkMode } from "@reactuses/core";
+import Logo from "./Logo";
 
-interface HeaderProps {
-  toggleTheme: () => void; // Temayı değiştiren fonksiyon
-  isDarkMode: boolean; // Mevcut tema durumu
-}
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
-  const [isOpen, setIsOpen] = useState(false); // Mobil menü durumu
-
+  const [theme, toggleDark] = useDarkMode({
+    classNameDark: "dark",
+    classNameLight: "",
+    defaultValue: false,
+  });
   return (
-    <header className="w-full bg-gray-900 text-white shadow-lg sticky top-0 z-50">
-      <nav className="container mx-auto flex items-center justify-between p-4 md:p-6">
-        {/* Logo/Site Adı */}
-        <Link
-          to="/"
-          className="text-3xl font-bold text-indigo-500 hover:text-indigo-400 transition-colors duration-200"
-        >
-          Seymen Sami
+    <header className="w-full bg-[#b9c1c5] dark:bg-neutral-850 shadow-md sticky top-0 z-50 ">
+      <nav className="container flex  justify-between items-center p-4 md:p-6 min-h-[64px] ">
+        <Link to="/" className="ml-2 sm:ml-0">
+          <Logo />
         </Link>
 
-        {/* Masaüstü Navigasyon ve Tema Butonu */}
         <div className="hidden md:flex items-center space-x-8">
           <Link
             to="/"
-            className="text-lg font-medium text-gray-300 hover:text-white hover:underline transition-all duration-200 underline-offset-4"
+            className="text-preset-4  text-neutral-700 dark:text-neutral-300  hover:text-black hover:dark:text-white   duration-250 transform hover:scale-105"
           >
             Anasayfa
           </Link>
           <Link
             to="/about"
-            className="text-lg font-medium text-gray-300 hover:text-white hover:underline transition-all duration-200 underline-offset-4"
+            className="text-preset-4  text-neutral-700 dark:text-neutral-300  hover:text-black hover:dark:text-white   duration-250 transform hover:scale-105"
           >
             Hakkımda
           </Link>
           <Link
             to="/projects"
-            className="text-lg font-medium text-gray-300 hover:text-white hover:underline transition-all duration-200 underline-offset-4"
+            className="text-preset-4  text-neutral-700 dark:text-neutral-300  hover:text-black hover:dark:text-white   duration-250 transform hover:scale-105"
           >
             Projeler
           </Link>
           <Link
             to="/contact"
-            className="text-lg font-medium text-gray-300 hover:text-white hover:underline transition-all duration-200 underline-offset-4"
+            className="text-preset-4  text-neutral-700 dark:text-neutral-300  hover:text-black hover:dark:text-white   duration-250 transform hover:scale-105"
           >
             İletişim
           </Link>
 
-          {/* Tema Değiştirme Butonu - Masaüstü */}
           <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200"
+            onClick={() => toggleDark()}
+            className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-gray-600 duration-200"
             aria-label="Toggle dark mode"
           >
-            {isDarkMode ? (
-              // Güneş ikonu (açık mod için)
+            {theme ? (
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -71,7 +66,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
                 ></path>
               </svg>
             ) : (
-              // Ay ikonu (koyu mod için)
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -90,15 +84,13 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
           </button>
         </div>
 
-        {/* Mobil Menü Butonu ve Tema Değiştirme Butonu */}
         <div className="md:hidden flex items-center space-x-4">
-          {/* Tema Değiştirme Butonu - Mobil */}
           <button
-            onClick={toggleTheme}
+            onClick={() => toggleDark()}
             className="p-2 rounded-full bg-gray-700 text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors duration-200"
             aria-label="Toggle dark mode"
           >
-            {isDarkMode ? (
+            {theme ? (
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -161,9 +153,8 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkMode }) => {
         </div>
       </nav>
 
-      {/* Mobil Açılır Menü */}
       {isOpen && (
-        <div className="md:hidden bg-gray-800 pb-4">
+        <div className="md:hidden bg-gray-800 pb-1 pt-1 fixed top-16 left-0 w-full z-50 mt-3">
           <Link
             to="/"
             onClick={() => setIsOpen(false)}

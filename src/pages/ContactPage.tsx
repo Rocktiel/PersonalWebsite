@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
               https://github.com/Rocktiel
             </a>
           </p>
-          {/* İsteğe bağlı olarak bir iletişim formu ekleyebilirsiniz */}
+          //TODO İletişim Formu
         </div>
       </div>
     </div>
